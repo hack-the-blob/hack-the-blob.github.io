@@ -1,0 +1,86 @@
+head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    // Open Graph Protocol meta tags
+    meta(property="og:title" content="Hack the Blob")
+    meta(property="og:url" content="https://ruyili.ca")
+    meta(property="og:image" content="img/htb.png")
+
+    // TODO favicon
+    title Hack The Blob
+
+    // Stylesheets
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet")
+    link(href="index.css" rel="stylesheet")
+
+    // Scripts
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js")
+    script(src="scene.js")
+
+body
+    .section#main
+        .columns
+            .column.has-text-centered
+                #wrapper
+                    h1.title.is-1 Hack The Blob
+                    h2.subtitle.is-3
+                        | September 28, 2019
+                        br
+                        | Erindale Secondary School, Mississauga
+                    a.button.is-danger(href="https://alexanderchudinov.typeform.com/to/Sgpqxp") APPLY NOW
+            .column.is-two-fifths
+                #scene-1
+                    div(data-depth="0.6")
+                        img(src="img/shapes/2.svg")
+                    div(data-depth="0.2")
+                        br
+                        br
+                        br
+                        img#logo(src="img/htb.png")
+
+    img.arc(src="img/shapes/arc.svg")
+    .section.has-text-centered#sponsors
+        h1.title.is-1 Sponsors
+    img.triangle(src="img/shapes/triangle.svg")
+
+    .section.has-text-centered#faq
+        h1.title.is-1 Frequently Asked Questions (FAQ)
+        #wrapper
+            // img(src="img/shapes/1.svg")
+        .columns
+            .column.is-2
+            .column
+                .box
+                    h1.title.is-3 What is Hack The Blob?
+                    p
+                    | Hack The Blob is a 
+                    b hackathon
+                .box
+                    h1.title.is-3 Who can participate?
+                    p We welcome anyone, regardless of age! Whether you're a middle schooler or university student, you can participate in Hack The Blob.
+                .box
+                    h1.title.is-3 What should I bring to the hackathon?
+                    p Make sure to bring your laptop and a charger. The event will be a day long, so feel free to bring whatever makes you comfortable!
+                .box
+                    h1.title.is-3 How many people can I have on a team?
+                    p You may compete in groups of at most 4 members. It is recommended that you form your team prior to the event.
+            .column
+                .box
+                    h1.title.is-3 Can I participate even if I don't know how to code?
+                    p Absolutely! Beginners are always welcome. There will be workshops dedicated to help you learn how to create your product.
+                .box
+                    h1.title.is-3 How much will it cost to attend?
+                    p Approximately $0. Anyone may attend Hack The Blob for free!
+                .box
+                    h1.title.is-3 I have a question that hasn't been answered here. Where can I ask?
+                    p 
+                    | You can contact us on our 
+                    a(href="https://discord.gg/EkwQsEA") Discord 
+                    | server, our Twitter account at 
+                    a(href="https://twitter.com/hacktheblob") @HackTheBlob
+                    | , or send us an 
+                    a(href="mailto: hacktheblob@gmail.com") email.
+
+            .column.is-2
