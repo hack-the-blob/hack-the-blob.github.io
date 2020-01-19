@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname)))
 app.get('/data', (req,res) => {
     res.sendFile(__dirname+'/data.json')
 }).post('/upload', (req,res) => {
-    console.log(req.body)
+    res.send(req.body)
 }).post('/change-position', upload.fields([]) ,(req,res) => {
     position[0] = req.body.lat
     position[1] = req.body.lng
