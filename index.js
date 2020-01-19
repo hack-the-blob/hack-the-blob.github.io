@@ -14,20 +14,19 @@ const quit = (err) => {
 }
 
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname)))
 
 app.get('/data', (req,res) => {
     res.sendFile(__dirname+'/data.json')
 }).post('/upload', (req,res) => {
-    res.send("thanks for:"+res.body)
-}).post('/change-position', upload.fields([]) ,(req,res) => {
-    position[0] = req.body.lat
-    position[1] = req.body.lng
-    position[2] = req.body.alt
-    res.redirect('/enter-position')
-}).get('/enter-position',(req,res) => {
-    res.sendFile(__dirname+'/poschange.html')
+    console.log(req.body)
+    res.send("OK")
+
+    fs.appendFile(__dirname+'/data.json', JSON.stringify(req.body)+',\n', function (err) {
+        if (err) throw err;
+        console.log('Saved!')
+    })
+
+
 })
 
 app.listen(port, (err) => {
