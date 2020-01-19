@@ -21,7 +21,7 @@ app.get('/data', (req,res) => {
     console.log(req.body)
     res.send("OK")
     var entry = req.body
-    Object.assign(entry,{time:(new Date()).toJSON().slice(0, 19).replace(/[-T]/g, ':')})
+    Object.assign(entry,{time:(new Date().toLocaleString())})
     fs.appendFile(__dirname+'/data.json', JSON.stringify(entry)+',\n', function (err) {
         if (err) throw err;
         console.log('Saved!')
