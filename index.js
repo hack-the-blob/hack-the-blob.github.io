@@ -22,10 +22,16 @@ app.get('/data', (req,res) => {
     res.send("OK")
     var entry = req.body
     Object.assign(entry,{time:(new Date().toLocaleString('en-CA', { timeZone: 'America/New_York' }))})
-    fs.appendFile(__dirname+'/data.json', JSON.stringify(entry)+',\n', function (err) {
-        if (err) throw err;
-        console.log('Saved!')
+    fs.readFile(__dirname+'/data.json', (err,data) => {
+        obj = JSON.parse(data.toString())
+        console.log(obj)
+        obj.data.push(req.body)
+        fs.writeFile(__dirname+'/data.json', JSON.stringify(obj), function (err) {
+            if (err) throw err;
+            console.log('Saved!')
+        })
     })
+
 })
 
 app.listen(port, (err) => {
