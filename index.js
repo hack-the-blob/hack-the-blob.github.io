@@ -20,13 +20,12 @@ app.get('/data', (req,res) => {
 }).post('/upload', (req,res) => {
     console.log(req.body)
     res.send("OK")
-
-    fs.appendFile(__dirname+'/data.json', JSON.stringify(req.body)+',\n', function (err) {
+    var entry = req.body
+    Object.assign(entry,{time:(new Date()).toJSON().slice(0, 19).replace(/[-T]/g, ':')})
+    fs.appendFile(__dirname+'/data.json', JSON.stringify(entry)+',\n', function (err) {
         if (err) throw err;
         console.log('Saved!')
     })
-
-
 })
 
 app.listen(port, (err) => {
