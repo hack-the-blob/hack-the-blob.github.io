@@ -15,7 +15,9 @@ const quit = (err) => {
 
 app.use(bodyParser.json())
 
-app.get('/data', (req,res) => {
+app.get('/', (req,res) => {
+    res.sendFile(__dirname+'/all-data.json')
+}).get('/data', (req,res) => {
     res.sendFile(__dirname+'/data.json')
 }).post('/upload', (req,res) => {
     console.log(req.body)
