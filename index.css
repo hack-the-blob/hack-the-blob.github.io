@@ -3,6 +3,7 @@ body {
     padding:0;
     margin:0;
     font-family: 'Rubik', sans-serif;
+    min-width: 1300px;
 }
 #header{
     width:100%;
@@ -58,6 +59,11 @@ button{
 button:hover{
     background: #393939;
 }
+#content-1 li{
+    border-left: #003366 10px solid;
+    padding:10px;
+    margin-bottom:10px;
+}
 ul{
     list-style-type: none;
     text-align: center;
@@ -90,7 +96,31 @@ article img{
     float:right;
     width:30%;
     padding:1.5%;
+    padding-bottom:50px;
 }
 .sponsor img{
     width: 100%;
+}
+#team{
+    width:100%;
+    height:400px;
+    text-align: center;
+    padding-top:50px;
+}
+.team-member{
+    width:16.6%;
+    float:left;
+}
+.team-member img{
+    width:80%;
+    border-radius:50%;
+}
+footer{
+    width:100%;
+    margin-top:100px;
+    background: #f8f8f8;
+    text-align: center;
+}
+footer h5{
+    padding:30px;
 }
