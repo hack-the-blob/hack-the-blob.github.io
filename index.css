@@ -63,19 +63,18 @@ button:hover{
     border-left: #003366 10px solid;
     padding:10px;
     margin-bottom:10px;
+    text-align: left;
 }
 ul{
     list-style-type: none;
     text-align: center;
-    height:200px;
+    height:160px;
 }
 li{
     background: #f8f8f8;
     border-left: rgb(252, 193, 27) 10px solid;
     padding:10px;
     margin-bottom:10px;
-}
-li {
     position: relative;
     left: -20px;
 }
