@@ -1,122 +1,163 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans: 300,400,700|Rubik&display=swap');
+
+:root {
+    --yellow: #fcc11b;
+    --white: #ededed;
+    --black: #181818;
+    --navy: #003366;
+}
+
 body {
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
     font-family: 'Rubik', sans-serif;
     min-width: 1300px;
-    background-image: url(img/shapes/1.svg), url(img/shapes/3.svg);
+    background-image: url('img/shapes/1.svg'), url('img/shapes/3.svg');
     background-position: 0% 60%, 100% 80%;
     background-repeat: no-repeat, no-repeat;
 }
-#header{
-    width:100%;
-    background: hsl(0, 0%, 7%);
-    color:#f8f8f8;
+
+#header {
+    width: 100%;
+    background: var(--black);
+    color: var(--white);
     text-align: center;
-    height:210px;
+    height: 210px;
 }
-#title{
-    font-weight:100;
-    font-size:30px;
+
+#title {
+    font-weight: 100;
+    font-size: 30px;
 }
-#content-0{
-    width:100%;
-    height:400px;
+
+#content-0 {
+    width: 100%;
+    height: 400px;
 }
-#content-1{
-    width:90%;
-    padding-left:5%;
-    padding-right:5%;
-    padding-top:20px;
-    background: rgb(252, 193, 27);
+
+#content-1 {
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 20px;
+    background: var(--yellow);
     vertical-align: middle;
     display: inline-block;
 }
-#device-image{
-    max-height:300px;
-    padding:20px;
-    width:100%;
-    max-width:400px;
-    object-fit:contain;
+
+#content-1 p {
+    line-height: 25px;
 }
-.column-3{
-    width:33%;
-    float:left;
+
+#content-1 li {
+    border-left-color: var(--navy);
+}
+
+#device-image {
+    max-height: 300px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    object-fit: contain;
+}
+
+.column-3 {
+    width: 33%;
+    float: left;
     text-align: center;
 }
-.column-3 p{
-    width:70%;
-    margin-left:15%;
+
+.column-3 p {
+    width: 70%;
+    margin-left: 15%;
 }
-button{
-    width:60%;
-    height:50px;
-    margin:0px;
-    background: #131313;
+
+a.button {
+    display: block;
+    width: 60%;
+    margin: auto;
+    height: 50px;
+    background: var(--black);
     font-size: 15px;
-    border-radius:50px;
-    color:white;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50px;
+    color: var(--white);
     font-weight: 600;
-    border:none;
+    border: none;
+    text-decoration: none;
 }
-button:hover{
+
+a.button:hover {
     background: #393939;
+    color: var(--yellow);
 }
-#content-1 li{
-    border-left: #003366 10px solid;
-    padding:10px;
-    margin-bottom:10px;
-    text-align: left;
-}
-ul{
+
+ul {
     list-style-type: none;
     text-align: center;
-    height:160px;
+    height: 160px;
 }
-li{
+
+li {
     background: #f8f8f8;
-    border-left: rgb(252, 193, 27) 10px solid;
-    padding:10px;
-    margin-bottom:10px;
+    border-left: var(--yellow) 10px solid;
+    padding: 10px;
+    margin-bottom: 10px;
     position: relative;
     left: -20px;
 }
-article{
-    padding:20px;
+
+article {
+    padding: 20px;
 }
 
-article img{
-    float:right;
+
+article img {
+    float: right;
 }
 
-#sponsors{
+
+#sponsors {
     text-align: center;
     width: 100%;
-    height:500px;
+    height: 500px;
 }
-.sponsor{
-    float:right;
-    width:30%;
-    padding:1.5%;
-    padding-bottom:50px;
+
+.sponsor {
+    float: right;
+    width: 30%;
+    padding: 1.5%;
+    padding-bottom: 50px;
 }
-.sponsor img{
+
+.sponsor img {
     width: 100%;
 }
-#team{
-    width:100%;
-    height:400px;
+
+#team {
+    width: 100%;
+    height: 400px;
     text-align: center;
-    padding-top:50px;
+    padding-top: 50px;
 }
-.team-member{
-    width:16.6%;
-    float:left;
+
+.team-member {
+    width: 16.6%;
+    float: left;
 }
-.team-member img{
-    height:200px;
-    width:200px;
-    border-radius:50%;
+
+.team-member img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
     object-fit: contain;
-    background: #b0b0b0;
+}
+
+a {
+    color: var(--black);
+}
+
+a:hover {
+    color: #0a70e4;
 }
