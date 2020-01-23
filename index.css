@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans: 300,400,700|Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Rubik&display=swap');
 
 :root {
     --yellow: #fcc11b;
@@ -133,6 +133,7 @@ article img {
 
 .sponsor img {
     width: 100%;
+    background: var(--navy);
 }
 
 #team {
@@ -152,6 +153,7 @@ article img {
     width: 200px;
     border-radius: 50%;
     object-fit: contain;
+    background: url('img/htb2.png');
 }
 
 a {
