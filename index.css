@@ -12,6 +12,7 @@ body {
     margin: 0;
     font-family: 'Rubik', sans-serif;
     min-width: 1300px;
+    width:100%;
     background-image: url('img/shapes/1.svg'), url('img/shapes/3.svg');
     background-position: 0% 60%, 100% 80%;
     background-repeat: no-repeat, no-repeat;
